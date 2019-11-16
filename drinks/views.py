@@ -24,7 +24,7 @@ def search_results(besos):
 
     else:
         q = Q()
-        for queries in query:
+        for queries in query.split(','):
             q |= (Q(ingredients__ingredient_name__contains=queries))
             #WHY does it look for 'sok z cytryny' and shows as well 'sok z limonki'
         results = Recipe.objects.filter(q)
