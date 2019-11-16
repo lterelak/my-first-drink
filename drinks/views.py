@@ -37,14 +37,4 @@ def search_results(besos):
 
 
 
-    #else:
-    #    q = Q()
-    #    for queries in query.split():
-    #        q |= (Q(ingredients__ingredient_name__contains=queries))
-    #        #why it look for 'sok z cytryny' and show as well sok z limonki
-    #    results = Recipe.objects.filter(q)
-    #    template = "drinks/search_results.html"
-    #    context = {
-    #    'results' : results,
-    #    }
-    #    return render(besos, template, context)
+    late, context)
