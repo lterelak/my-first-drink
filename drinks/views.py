@@ -9,7 +9,6 @@ from django.contrib import messages
 from django.shortcuts import redirect
 
 
-
 def drink_list(request):
     template = "drinks/drink_list.html"
     return render(request, template)
@@ -19,7 +18,6 @@ def search_results(besos):
     query = besos.GET.get('q')
 
     if not query or query == ' ' or query == '  ' or query == '   ':
-    #how to write this ^  in shortest way? if string is empty then return 'drink_list'
         messages.error(besos, "Search field can not be empty")
         return redirect('drink_list')
 
@@ -34,7 +32,3 @@ def search_results(besos):
         'results' : results,
         }
         return render(besos, template, context)
-
-
-
-    late, context)
