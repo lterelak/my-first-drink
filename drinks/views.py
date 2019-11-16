@@ -18,6 +18,7 @@ def search_results(besos):
     query = besos.GET.get('q')
 
     if not query or query == ' ' or query == '  ' or query == '   ':
+        #how to write in in shortest way
         messages.error(besos, "Search field can not be empty")
         return redirect('drink_list')
 
@@ -25,7 +26,7 @@ def search_results(besos):
         q = Q()
         for queries in query.split():
             q |= (Q(ingredients__ingredient_name__contains=queries))
-            #why it look for 'sok z cytryny' and show as well sok z limonki
+            #why does it look for 'sok z cytryny' and shows as well 'sok z limonki'
         results = Recipe.objects.filter(q)
         template = "drinks/search_results.html"
         context = {
