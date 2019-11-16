@@ -1,0 +1,30 @@
+{% load static %}
+<html>
+  <head>
+    <title>Drink Drank Drunk</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/drinks.css' %}">
+  </head>
+  <body>
+    <div>
+      <h1><a href="/">Drink Drank Drunk</a></h1>
+    </div>
+
+    {% if results %}
+      {% for drink in results %}
+        <div>
+          <p><b>{{ drink.recipe_name }}</b></p>
+          <p><u>Preparation:</u> {{ drink.preparation }}</p>
+          <p><u>Ingredients:</u>
+            {% for ingredient in drink.ingredients.all %}
+              {{ingredient.ingredient_name}}{% if not forloop.last %},{% endif %}
+            {% endfor %}
+          </p>
+        </div>
+      {% endfor %}
+    {% else %}
+      <div>Such ingredients do not exist</div>
+    {% endif %}
+  </body>
+</html>

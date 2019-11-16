@@ -8,14 +8,13 @@ class Ingredient(models.Model):
   def __str__(self):
     return self.ingredient_name
 
+
 class Recipe(models.Model):
 
   recipe_name = models.CharField(max_length=250)
   preparation = models.CharField(max_length=1000)
   ingredients = models.ManyToManyField(Ingredient)
 
-  def __str__(self):
-    return self.recipe_name
 
   def __str__(self):
-    return self.preparation
+    return self.recipe_name
