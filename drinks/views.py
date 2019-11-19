@@ -22,7 +22,8 @@ def search_results(request):
 
     #early return (else:)
     q = Q()
-    for ingredient_name in query.split(','):
+    for ingredient_name in query.split():
+    #with point .split(',') it is not going to look for many ingredients, but "sok z cytryny" is then counted as one ingredient, how to search for many ingredients and make django know that "sok z cytryny" is only one ingredient in the same time.
         q |= (Q(ingredients__ingredient_name__contains=ingredient_name))
     results = Recipe.objects.filter(q)
     template = "drinks/search_results.html"
