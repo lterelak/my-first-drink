@@ -2,5 +2,24 @@ h1 a, h2 a {
     color: #DE1FAE;
 }
 body {
-    padding-left: 20px;
+    padding-left: 15px;
+}
+
+#Container
+{
+
+
+}
+#searchfield
+{
+  margin-left: 10px;
+  text-align: center;
+  padding:30px;
+}
+#logo
+{
+  text-align: center;
+  color: white;
+  background-color: #808080;
+  text-align: center;
 }

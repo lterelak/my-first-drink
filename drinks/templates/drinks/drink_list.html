@@ -1,18 +1,28 @@
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/drinks.css' %}">
+  </head>
+  <body>
 
-<div>
-    <h1><a href="/">Drink drank drunk</a></h1>
-</div>
-<h1>Jakie masz skladniki?</h1>
+    <div id=logo>
+      <h1>Drink Drank Drunk</h2>
+    </div>
+    <div id=searchfield>
+      <h1>Jakie masz skladniki?</h1>
 
-<form action="{% url 'search_results' %}" method="get" autocomplete="off">
-  <input name="q" type="text" placeholder="Search...">
-</form>
-{% if messages %}
-<ul class="messages">
-  {% for message in messages %}
-  <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-  {% endfor %}
-</ul>
-{% endif %}
+      <form action="{% url 'search_results' %}" method="get" autocomplete="off">
+        <input name="q" type="text" placeholder="Search...">
+      </form>
+      {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+   </body>
+</html>
