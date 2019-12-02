@@ -6,9 +6,14 @@
     <link rel="stylesheet" href="{% static 'css/drinks.css' %}">
   </head>
   <body>
-  <form action="/accounts/login">
-    <input type="submit" value="Log in" />
-  </form>
+    <div id=login>
+      {% if user.is_authenticated %}
+        Hi {{ user.username }}!
+      {% else %}
+        <p>You are not logged in</p>
+        <a href="{% url 'login' %}">login</a>
+      {% endif %}
+    </div>
     <div id=logo>
       <h1>Drink Drank Drunk</h2>
     </div>
