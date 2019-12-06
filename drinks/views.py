@@ -7,6 +7,9 @@ from .models import Ingredient
 from django.contrib import messages
 from django.shortcuts import redirect
 
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+
 
 def drink_list(request):
     template = "drinks/drink_list.html"
@@ -31,3 +34,10 @@ def search_results(request):
     'results' : results,
     }
     return render(request, template, context)
+
+def SignUp(request):
+
+    template="drinks/signup.html"
+    form_class = UserCreationForm
+    form = form_class
+    return render(request, template, {'form': form})
