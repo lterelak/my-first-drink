@@ -8,7 +8,6 @@ from django.contrib import messages
 from django.shortcuts import redirect
 
 from django.contrib.auth.forms import UserCreationForm
-from django.urls import reverse_lazy
 
 
 def drink_list(request):
@@ -35,9 +34,24 @@ def search_results(request):
     }
     return render(request, template, context)
 
-def SignUp(request):
+#def SignUp(request):
 
-    template="drinks/signup.html"
-    form_class = UserCreationForm
-    form = form_class
-    return render(request, template, {'form': form})
+#    template="drinks/signup.html"
+#    form_class = UserCreationForm
+#    form = form_class
+#    context = {
+#        'form' : form
+#    }
+#    return render(request, template, context)
+
+def signup(request):
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+        return redirect("/")
+    else:
+        form = UserCreationForm()
+
+    return render(request, "drinks/signup.html", {"form":form})
