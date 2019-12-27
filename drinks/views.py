@@ -9,6 +9,7 @@ from django.shortcuts import redirect
 
 from django.contrib.auth.forms import UserCreationForm
 
+from .forms import RecipeForm
 
 def drink_list(request):
     template = "drinks/drink_list.html"
@@ -34,16 +35,6 @@ def search_results(request):
     }
     return render(request, template, context)
 
-#def SignUp(request):
-
-#    template="drinks/signup.html"
-#    form_class = UserCreationForm
-#    form = form_class
-#    context = {
-#        'form' : form
-#    }
-#    return render(request, template, context)
-
 def signup(request):
     if request.method == "POST":
         form = UserCreationForm(request.POST)
@@ -55,3 +46,34 @@ def signup(request):
         form = UserCreationForm()
 
     return render(request, "drinks/signup.html", {"form":form})
+
+def login_required(request):
+    template = "drinks/login_required.html"
+    return render(request, template)
+
+
+
+def add_recipe(request):
+
+     if not request.user.is_authenticated:
+         return redirect('login_required')
+
+     add_recipe = RecipeForm()
+     if add_recipe.is_valid():
+          print("valid form")
+          add_recipe.save()
+     template = "drinks/add_recipe.html"
+     return render(request, template, {'RecipeForm': add_recipe})
+
+# def post_recipe(request):
+#     form = RecipeForm(request.POST)
+#     if form.is_valid():
+#         recipe_name = form.cleaned_data['recipe_name']
+#         preparation = form.cleaned.data['preparation']
+#         ingredients = form.cleaned.data['ingredients']
+#         form.save()
+#     template = "drinks/search_results.html"
+#     return render(request, template, {'form': form, 'recipe_name': recipe_name, 'preparation': preparation, 'ingredients': ingredients})
+
+
+

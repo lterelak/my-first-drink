@@ -1,0 +1,9 @@
+<h1>Add recipe</h1>
+
+<form method="post" action="">
+{% csrf_token %}
+<table>
+{{RecipeForm}}
+</table>
+<input type="submit" value="Submit Form"/>
+</form>
