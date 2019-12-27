@@ -12,8 +12,7 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import RecipeForm
 
 def drink_list(request):
-    template = "drinks/drink_list.html"
-    return render(request, template)
+    return render(request, "drinks/drink_list.html")
 
 def search_results(request):
 
@@ -29,31 +28,22 @@ def search_results(request):
     #with point .split(',') it is not going to look for many ingredients, but "sok z cytryny" is then counted as one ingredient, how to search for many ingredients and make django know that "sok z cytryny" is only one ingredient in the same time.
         q |= (Q(ingredients__ingredient_name__contains=ingredient_name))
     results = Recipe.objects.filter(q)
-    template = "drinks/search_results.html"
-    context = {
-    'results' : results,
-    }
-    return render(request, template, context)
+    return render(request, "drinks/search_results.html", {"results":results})
 
 def signup(request):
+    form = UserCreationForm()
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-
         return redirect("/")
-    else:
-        form = UserCreationForm()
-
     return render(request, "drinks/signup.html", {"form":form})
 
 def login_required(request):
-    template = "drinks/login_required.html"
-    return render(request, template)
+    return render(request, "drinks/login_required.html")
 
 def success_added_recipe(request):
-    template = "drinks/success_added_recipe.html"
-    return render(request, template)
+    return render(request, "drinks/success_added_recipe.html")
 
 def add_recipe(request):
 
@@ -64,8 +54,8 @@ def add_recipe(request):
      if add_recipe.is_valid():
           add_recipe.save()
           return redirect('success_added_recipe')
-     template = "drinks/add_recipe.html"
-     return render(request, template, {'RecipeForm': add_recipe})
+
+     return render(request, 'drinks/add_recipe.html', {'RecipeForm': add_recipe})
 
 
 
