@@ -51,29 +51,23 @@ def login_required(request):
     template = "drinks/login_required.html"
     return render(request, template)
 
-
+def success_added_recipe(request):
+    template = "drinks/success_added_recipe.html"
+    return render(request, template)
 
 def add_recipe(request):
 
      if not request.user.is_authenticated:
          return redirect('login_required')
 
-     add_recipe = RecipeForm()
+     add_recipe = RecipeForm(request.POST)
      if add_recipe.is_valid():
-          print("valid form")
           add_recipe.save()
+          return redirect('success_added_recipe')
      template = "drinks/add_recipe.html"
      return render(request, template, {'RecipeForm': add_recipe})
 
-# def post_recipe(request):
-#     form = RecipeForm(request.POST)
-#     if form.is_valid():
-#         recipe_name = form.cleaned_data['recipe_name']
-#         preparation = form.cleaned.data['preparation']
-#         ingredients = form.cleaned.data['ingredients']
-#         form.save()
-#     template = "drinks/search_results.html"
-#     return render(request, template, {'form': form, 'recipe_name': recipe_name, 'preparation': preparation, 'ingredients': ingredients})
+
 
 
 
