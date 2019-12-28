@@ -28,3 +28,15 @@ body {
 {
   text-align: right;
 }
+#menu
+
+ul > li
+{
+    list-style-type: none;
+    float: left;
+}
+
+ul > li > a
+{
+    padding: 0 20px;
+}
