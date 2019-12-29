@@ -14,6 +14,7 @@ class Recipe(models.Model):
   recipe_name = models.CharField(max_length=250)
   preparation = models.CharField(max_length=1000)
   ingredients = models.ManyToManyField(Ingredient)
+  recipe_image = models.ImageField(upload_to='images/', default='')
 
 
   def __str__(self):
