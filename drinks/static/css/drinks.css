@@ -15,24 +15,24 @@ body {
   margin-left: 10px;
   text-align: center;
   padding:30px;
-  background-color: blue;
+  background-color: white;
 }
 #logo
 {
   text-align: center;
   color: white;
-  background-color: #808080;
+  background-color: #white;
   text-align: center;
 
 }
 #login
 {
   text-align: right;
-  background-color: red;
+  background-color: #C0C0C0;
 }
 #menu
 {
-    background-color: blue;
+    background-color: white;
 }
 ul > li
 {
