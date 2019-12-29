@@ -6,12 +6,15 @@
     <link rel="stylesheet" href="{% static 'css/drinks.css' %}">
   </head>
   <body>
+    <div id=container>
     <div id=menu>
+      {% if user.is_authenticated %}
       <ul>
         <li><a href="add_recipe">Add recipe</a></li>
         <li><a href="">Add ingredient</a></li>
         <li><a href="">Drink list</a></li>
       </ul>
+      {% endif %}
     </div>
     <div id=login>
       {% if user.is_authenticated %}
@@ -40,6 +43,7 @@
         {% endfor %}
       </ul>
       {% endif %}
+    </div>
     </div>
    </body>
 </html>

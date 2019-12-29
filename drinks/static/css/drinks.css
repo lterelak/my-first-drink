@@ -15,7 +15,7 @@ body {
   margin-left: 10px;
   text-align: center;
   padding:30px;
-  background: url("/media.drink.jpg")
+  background-color: blue;
 }
 #logo
 {
@@ -23,13 +23,17 @@ body {
   color: white;
   background-color: #808080;
   text-align: center;
+
 }
 #login
 {
   text-align: right;
+  background-color: red;
 }
 #menu
-
+{
+    background-color: blue;
+}
 ul > li
 {
     list-style-type: none;
