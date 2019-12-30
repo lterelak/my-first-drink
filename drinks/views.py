@@ -47,9 +47,6 @@ def success_added_recipe(request):
 
 def add_recipe(request):
 
-     if not request.user.is_authenticated:
-         return redirect('login_required')
-
      add_recipe = RecipeForm(request.POST)
      if add_recipe.is_valid():
           add_recipe.save()
