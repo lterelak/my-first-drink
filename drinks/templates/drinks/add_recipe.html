@@ -1,9 +1,11 @@
+<html>
 <h1>Add recipe</h1>
 
-<form method="post" action="{% url 'add_recipe' %}">
+<form method="post" action="{% url 'add_recipe' %}" enctype="multipart/form-data">
 {% csrf_token %}
 <table>
 {{RecipeForm}}
 </table>
 <input type="submit" value="Add recipe"/>
 </form>
+</html>

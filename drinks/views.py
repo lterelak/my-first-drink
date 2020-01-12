@@ -47,12 +47,14 @@ def success_added_recipe(request):
 
 def add_recipe(request):
 
-     add_recipe = RecipeForm(request.POST)
+     add_recipe = RecipeForm(request.POST, request.FILES)
+
      if add_recipe.is_valid():
           add_recipe.save()
           return redirect('success_added_recipe')
 
      return render(request, 'drinks/add_recipe.html', {'RecipeForm': add_recipe})
+
 
 
 
