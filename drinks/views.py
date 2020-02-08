@@ -10,7 +10,7 @@ from django.shortcuts import redirect
 from django.contrib.auth.forms import UserCreationForm
 
 from .forms import RecipeForm
-
+from .forms import IngredientForm
 def drink_list(request):
     return render(request, "drinks/drink_list.html")
 
@@ -46,6 +46,8 @@ def success_added_recipe(request):
     return render(request, "drinks/success_added_recipe.html")
 
 def add_recipe(request):
+     if not request.user.is_authenticated:
+         return render(request, 'drinks/login_required.html')
 
      add_recipe = RecipeForm(request.POST, request.FILES)
 
@@ -56,7 +58,20 @@ def add_recipe(request):
      return render(request, 'drinks/add_recipe.html', {'RecipeForm': add_recipe})
 
 
+def add_ingredient(request):
+    if not request.user.is_authenticated:
+        return render(request, 'drinks/login_required.html')
 
+    add_ingredient = IngredientForm(request.POST)
+
+    if add_ingredient.is_valid():
+        add_ingredient.save()
+        return redirect('success_added_ingredient')
+
+    return render(request, 'drinks/add_ingredient.html', {'IngredientForm': add_ingredient})
+
+def success_added_ingredient(request):
+    return render(request, 'drinks/success_added_ingredient.html')
 
 
 
