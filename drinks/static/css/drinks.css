@@ -1,38 +1,32 @@
-h1 a, h2 a {
-    color: #DE1FAE;
-}
-body {
-    padding-left: 15px;
-}
-
-#Container
-{
-
-
-}
-#searchfield
-{
-  margin-left: 10px;
-  text-align: center;
-  padding:30px;
-  background-color: white;
-}
 #logo
 {
-  text-align: center;
-  color: white;
-  background-color: #white;
-  text-align: center;
-
+    background: #000000;
+    text-align: center;
+    height: 30px;
+    color: white;
 }
+
+#headliner
+{
+    width: 100%;
+}
+
 #login
 {
-  text-align: right;
-  background-color: #C0C0C0;
+    background: white;
+    width: 50%;
+    height: 70px;
+    float: right;
+    text-align: right;
 }
+
 #menu
 {
-    background-color: white;
+    background: white;
+    width: 50%;
+    height: 70px;
+    float: right;
+    text-align: left;
 }
 ul > li
 {
@@ -44,3 +38,9 @@ ul > li > a
 {
     padding: 0 20px;
 }
+#searchfield
+{
+    background: white;
+    text-align: center;
+}
+

@@ -11,6 +11,9 @@ from django.contrib.auth.forms import UserCreationForm
 
 from .forms import RecipeForm
 from .forms import IngredientForm
+
+from django.http import HttpResponse
+
 def drink_list(request):
     return render(request, "drinks/drink_list.html")
 
@@ -73,5 +76,7 @@ def add_ingredient(request):
 def success_added_ingredient(request):
     return render(request, 'drinks/success_added_ingredient.html')
 
+def sms_response(request):
+    return HttpResponse("Hello world.")
 
 

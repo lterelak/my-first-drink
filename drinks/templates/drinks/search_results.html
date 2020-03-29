@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="{% static 'css/drinks.css' %}">
   </head>
   <body>
-    <div id=container>
-      <h1><a href="/">Wróć do strony głównej</a></h1>
-
-
+  <div id="searchresults">
+      <div id="backtomainside">
+      <h1><a href="/">go back to main side</a></h1>
+      </div>
     {% if results %}
       {% for drink in results %}
           <p><b>{{ drink.recipe_name }}</b></p>
@@ -20,7 +20,7 @@
               {{ingredient.ingredient_name}}{% if not forloop.last %},{% endif %}
             {% endfor %}
           </p>
-          <p><img src="{{drink.recipe_image.url}}" alt="{{drink.recipe_name}}"</p>
+          <p><img src="{{drink.recipe_image.url}}" alt="{{drink.recipe_name}}" style="width:320px;height:350px;"></p>
       {% endfor %}
 
     {% else %}

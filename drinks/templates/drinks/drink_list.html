@@ -6,33 +6,34 @@
     <link rel="stylesheet" href="{% static 'css/drinks.css' %}">
   </head>
   <body>
-    <div id=container>
-    <div id=menu>
-      {% if user.is_authenticated %}
-      <ul>
-        <li><a href="add_recipe">Add recipe</a></li>
-        <li><a href="add_ingredient">Add ingredient</a></li>
-        <li><a href="">Drink list</a></li>
-      </ul>
-      {% endif %}
+    <div id="logo">
+        Drink drank drunk
     </div>
-    <div id=login>
-      {% if user.is_authenticated %}
-        Hi {{ user.username }}!
-      <p><a href="{% url 'logout' %}">logout</a></p>
-      {% else %}
-        <p>You are not logged in</p>
-        <a href="{% url 'login' %}">login</a>
-      {% endif %}
-      <br>
-      <a href="/accounts/signup">Registration</a>
-    </div>
-    <div id=logo>
-      <h1>Drink Drank Drunk</h2>
-    </div>
-    <div id=searchfield>
-      <h1>Jakie masz skladniki?</h1>
+    <div id="headliner">
+        <div id="login">
+            {% if user.is_authenticated %}
+                Hi {{ user.username }}!
+            <p><a href="{% url 'logout' %}">logout</a></p>
+            {% else %}
+                <p>You are not logged in</p>
+                <a href="{% url 'login' %}">login</a>
+                <br>
+                <a href="/accounts/signup">Registration</a>
+            {% endif %}
 
+        </div>
+        <div id="menu">
+            {% if user.is_authenticated %}
+            <ul>
+                <li><a href="add_recipe">Add recipe</a></li>
+                <li><a href="add_ingredient">Add ingredient</a></li>
+                <li><a href="">Drink list</a></li>
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+    <div id="searchfield">
+      <h1>Jakie masz skladniki?</h1>
       <form action="{% url 'search_results' %}" method="get" autocomplete="off">
         <input name="q" type="text" placeholder="Search...">
       </form>
@@ -43,7 +44,7 @@
         {% endfor %}
       </ul>
       {% endif %}
-    </div>
-    </div>
-   </body>
+     </div>
+
+  </body>
 </html>

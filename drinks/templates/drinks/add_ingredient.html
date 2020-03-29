@@ -1,11 +1,23 @@
+{% load static %}
 <html>
+  <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/drinks.css' %}">
+  </head>
+<body>
+<div id="addingredient">
 <h1>Add ingredient</h1>
-
+</br>
+</br>
 <form method="post" action="{% url 'add_ingredient' %}">
 {% csrf_token %}
-<table>
+<table align="center">
 {{IngredientForm}}
 </table>
+</br>
 <input type="submit" value="Add ingredient"/>
 </form>
+</div>
+</body>
 </html>
