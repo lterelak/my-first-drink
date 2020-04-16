@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="{% static 'css/drinks.css' %}">
   </head>
   <body>
+  <div id="backtomainside">
+    <h1><a href="/">go back to main side</a></h1>
+  </div>
   <div id="searchresults">
-      <div id="backtomainside">
-      <h1><a href="/">go back to main side</a></h1>
-      </div>
     {% if results %}
       {% for drink in results %}
-          <p><b>{{ drink.recipe_name }}</b></p>
-          <p><u>Preparation:</u> {{ drink.preparation }}</p>
+      <p><b><a href="{% url 'recipe_details' pk=drink.pk %}">{{ drink.recipe_name }}</a></b></p>
           <p><u>Ingredients:</u>
             {% for ingredient in drink.ingredients.all %}
               {{ingredient.ingredient_name}}{% if not forloop.last %},{% endif %}

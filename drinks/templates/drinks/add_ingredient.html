@@ -6,18 +6,16 @@
     <link rel="stylesheet" href="{% static 'css/drinks.css' %}">
   </head>
 <body>
-<div id="addingredient">
 <h1>Add ingredient</h1>
 </br>
 </br>
 <form method="post" action="{% url 'add_ingredient' %}">
 {% csrf_token %}
-<table align="center">
+<table>
 {{IngredientForm}}
 </table>
 </br>
 <input type="submit" value="Add ingredient"/>
 </form>
-</div>
 </body>
 </html>

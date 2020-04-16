@@ -13,5 +13,9 @@ urlpatterns = [
     path('success/', views.success_added_recipe, name='success_added_recipe'),
     path('add_ingredient/', views.add_ingredient, name='add_ingredient'),
     path('success1/', views.success_added_ingredient, name='success_added_ingredient'),
-    path('sms/', views.sms_response),
+    path('sms/', views.send_sms, name='send_sms'),
+    path('drink_list1/', views.drink_list1, name='drink_list1'),
+    path('recipe_details/<int:pk>', views.recipe_details, name='recipe_details'),
+    path('generall_view', views.GenerallView, name='GenerallView'),#test
+    path('detail_view/<int:pk>', views.DetailView, name='DetailView'),#test
 ]

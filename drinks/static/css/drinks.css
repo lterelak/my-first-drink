@@ -43,4 +43,21 @@ ul > li > a
     background: white;
     text-align: center;
 }
+#searchresults
+{
+    text-align: center;
+}
+a
+{
+    font-size: 15px;
+}
 
+#add_recipe
+{
+    text-align: center;
+}
+
+#tablelogin
+{
+ text-align: center;
+}

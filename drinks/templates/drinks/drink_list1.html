@@ -1,0 +1,9 @@
+     {% for drink in drinks %}
+          <p><b><a href="{% url 'recipe_details' pk=drink.pk %}">{{ drink.recipe_name }}</a></b></p>
+          <p><u>Ingredients:</u>
+            {% for ingredient in drink.ingredients.all %}
+              {{ingredient.ingredient_name}}{% if not forloop.last %},{% endif %}
+            {% endfor %}
+          </p>
+          <p><img src="{{drink.recipe_image.url}}" alt="{{drink.recipe_name}}" style="width:320px;height:350px;"></p>
+      {% endfor %}

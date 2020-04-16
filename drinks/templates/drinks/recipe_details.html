@@ -1,0 +1,11 @@
+
+          <p><b>{{ recipe_details.recipe_name }}</b></p>
+          <p><u>Preparation:</u> {{ recipe_details.preparation }}</p>
+          <p><u>Ingredients:</u>
+              {% for ingredient in recipe_details.ingredients.all %}
+              {{ingredient.ingredient_name}}{% if not forloop.last %},{% endif %}
+              {% endfor %}
+
+          </p>
+          <p><img src="{{recipe_details.recipe_image.url}}" alt="{{recipe_details.recipe_name}}" style="width:320px;height:350px;"></p>
+          <a href = "/sms">Copy the link and send sms with the recipe to your friend!</a>
