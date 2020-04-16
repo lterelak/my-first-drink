@@ -108,6 +108,9 @@ def DetailView(request, pk):
     lista = get_object_or_404(Recipe, pk=pk)
     return render(request, 'drinks/DetailView.html', {'lista': lista})
 
+def test(request, pk):
+    lista = get_object_or_404(Recipe, pk=pk)
+    return render(request, 'drinks/DetailView.html', {'lista': lista})
 
 
 
