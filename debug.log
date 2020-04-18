@@ -30015,3 +30015,57 @@ Not Found: /favicon.ico
 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
 (0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient"; args=()
 "GET /add_recipe/ HTTP/1.1" 200 2609
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 09:09:57.460308' AND "django_session"."session_key" = 'jasue4obbcum7r2imhl4637rdzav4vy4'); args=('2020-04-18 09:09:57.460308', 'jasue4obbcum7r2imhl4637rdzav4vy4')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET / HTTP/1.1" 200 1091
+(0.000) SELECT "drinks_recipe"."id", "drinks_recipe"."recipe_name", "drinks_recipe"."preparation", "drinks_recipe"."recipe_image" FROM "drinks_recipe"; args=()
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 8; args=(8,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 9; args=(9,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 10; args=(10,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 12; args=(12,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 26; args=(26,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 32; args=(32,)
+"GET /drink_list1/ HTTP/1.1" 200 2449
+(0.001) SELECT "drinks_recipe"."id", "drinks_recipe"."recipe_name", "drinks_recipe"."preparation", "drinks_recipe"."recipe_image" FROM "drinks_recipe" WHERE "drinks_recipe"."id" = 8; args=(8,)
+(0.001) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 8; args=(8,)
+"GET /accounts/recipe_details/8 HTTP/1.1" 200 669
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 09:10:03.270791' AND "django_session"."session_key" = 'jasue4obbcum7r2imhl4637rdzav4vy4'); args=('2020-04-18 09:10:03.270791', 'jasue4obbcum7r2imhl4637rdzav4vy4')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /sms/ HTTP/1.1" 200 652
+"POST /sms/ HTTP/1.1" 200 4
+"POST /sms/ HTTP/1.1" 500 59
+"POST /sms/ HTTP/1.1" 200 4
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 09:12:51.860023' AND "django_session"."session_key" = 'jasue4obbcum7r2imhl4637rdzav4vy4'); args=('2020-04-18 09:12:51.860023', 'jasue4obbcum7r2imhl4637rdzav4vy4')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET / HTTP/1.1" 200 1091
+(0.001) SELECT "drinks_recipe"."id", "drinks_recipe"."recipe_name", "drinks_recipe"."preparation", "drinks_recipe"."recipe_image" FROM "drinks_recipe" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_recipe"."id" = "drinks_recipe_ingredients"."recipe_id") INNER JOIN "drinks_ingredient" ON ("drinks_recipe_ingredients"."ingredient_id" = "drinks_ingredient"."id") WHERE "drinks_ingredient"."ingredient_name" LIKE '%sok%' ESCAPE '\'; args=('%sok%',)
+(0.001) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 8; args=(8,)
+(0.001) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 9; args=(9,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 12; args=(12,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 26; args=(26,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 32; args=(32,)
+"GET /accounts/search/?q=sok HTTP/1.1" 200 2506
+(0.000) SELECT "drinks_recipe"."id", "drinks_recipe"."recipe_name", "drinks_recipe"."preparation", "drinks_recipe"."recipe_image" FROM "drinks_recipe"; args=()
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 8; args=(8,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 9; args=(9,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 10; args=(10,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 12; args=(12,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 26; args=(26,)
+(0.001) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 32; args=(32,)
+"GET /drink_list1/ HTTP/1.1" 200 2449
+(0.001) SELECT "drinks_recipe"."id", "drinks_recipe"."recipe_name", "drinks_recipe"."preparation", "drinks_recipe"."recipe_image" FROM "drinks_recipe" WHERE "drinks_recipe"."id" = 9; args=(9,)
+(0.001) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 9; args=(9,)
+"GET /accounts/recipe_details/9 HTTP/1.1" 200 873
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 09:13:01.008907' AND "django_session"."session_key" = 'jasue4obbcum7r2imhl4637rdzav4vy4'); args=('2020-04-18 09:13:01.008907', 'jasue4obbcum7r2imhl4637rdzav4vy4')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /sms/ HTTP/1.1" 200 652
