@@ -1,7 +1,0 @@
-<ul>
-{% for drink in lista1 %}
-    <li><a href="{% url 'DetailView' pk=drink.pk %}">{{ drink.recipe_name }}</a></li>
-{% empty %}
-    <li>No notes yet.</li>
-{% endfor %}
-</ul>

@@ -99,18 +99,22 @@ def send_sms(request):
         return HttpResponse("Send")
     return render(request, 'drinks/send_sms.html', {'send_sms': send_sms})
 
-###test vv
-def GenerallView(request):
-    lista1 = Recipe.objects.all()
-    return render(request, 'drinks/GenerallView.html', {'lista1': lista1})
+def send_sms(request):
+    TWILIO_ACCOUNT_SID ='ACe065f2ffd61b9e182a23e2ae24700ec6'
+    TWILIO_AUTH_TOKEN = 'fb5d43da8d4acfd19150c5cd899b4354'
+    client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
-def DetailView(request, pk):
-    lista = get_object_or_404(Recipe, pk=pk)
-    return render(request, 'drinks/DetailView.html', {'lista': lista})
+    if "username" in request.POST and "sendto" in request.POST and "message" in request.POST:
+        username = request.POST["username"]
+        sendto = request.POST["sendto"]
+        message=request.POST["message"]
+        client.messages.create(to=sendto,
+                               from_=+12015813242,
+                               body=message)
+        return HttpResponse("Send")
+    return render(request, 'drinks/send_sms.html', {'send_sms': send_sms})
 
-def test(request, pk):
-    lista = get_object_or_404(Recipe, pk=pk)
-    return render(request, 'drinks/DetailView.html', {'lista': lista})
+
 
 
 

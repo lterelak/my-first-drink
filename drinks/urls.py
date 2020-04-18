@@ -16,6 +16,5 @@ urlpatterns = [
     path('sms/', views.send_sms, name='send_sms'),
     path('drink_list1/', views.drink_list1, name='drink_list1'),
     path('recipe_details/<int:pk>', views.recipe_details, name='recipe_details'),
-    path('generall_view', views.GenerallView, name='GenerallView'),#test
-    path('detail_view/<int:pk>', views.DetailView, name='DetailView'),#test
+
 ]

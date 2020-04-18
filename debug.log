@@ -29807,3 +29807,211 @@ TypeError: recipe_details() got an unexpected keyword argument 'pk'
             WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
             ORDER BY name; args=None
 (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.003) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-16 20:16:38.631792' AND "django_session"."session_key" = 'o2bifk1aj31ppzgmjqs11yik3ft6nr3y'); args=('2020-04-16 20:16:38.631792', 'o2bifk1aj31ppzgmjqs11yik3ft6nr3y')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET / HTTP/1.1" 200 1091
+(0.000) SELECT "drinks_recipe"."id", "drinks_recipe"."recipe_name", "drinks_recipe"."preparation", "drinks_recipe"."recipe_image" FROM "drinks_recipe"; args=()
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 8; args=(8,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 9; args=(9,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 10; args=(10,)
+(0.001) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 12; args=(12,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 26; args=(26,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 32; args=(32,)
+"GET /drink_list1/ HTTP/1.1" 200 2449
+(0.001) SELECT "drinks_recipe"."id", "drinks_recipe"."recipe_name", "drinks_recipe"."preparation", "drinks_recipe"."recipe_image" FROM "drinks_recipe" WHERE "drinks_recipe"."id" = 8; args=(8,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 8; args=(8,)
+"GET /accounts/recipe_details/8 HTTP/1.1" 200 669
+"GET /sms/ HTTP/1.1" 200 634
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.003) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 08:53:37.076703' AND "django_session"."session_key" = 'o2bifk1aj31ppzgmjqs11yik3ft6nr3y'); args=('2020-04-18 08:53:37.076703', 'o2bifk1aj31ppzgmjqs11yik3ft6nr3y')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET / HTTP/1.1" 200 1091
+"GET /static/css/drinks.css HTTP/1.1" 304 0
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern '' [name='drink_list']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'search/' [name='search_results']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'no_name/' [name='drink_list']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'signup/' [name='signup']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'add_recipe/' [name='add_recipe']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'login_required/' [name='login_required']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'success/' [name='success_added_recipe']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'add_ingredient/' [name='add_ingredient']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'success1/' [name='success_added_ingredient']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'sms/' [name='send_sms']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'drink_list1/' [name='drink_list1']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'recipe_details/<int:pk>' [name='recipe_details']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) 'accounts/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\myvenv\\lib\\site-packages\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^media/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern '' [name='drink_list']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'search/' [name='search_results']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'no_name/' [name='drink_list']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'signup/' [name='signup']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'add_recipe/' [name='add_recipe']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'login_required/' [name='login_required']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'success/' [name='success_added_recipe']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'add_ingredient/' [name='add_ingredient']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'success1/' [name='success_added_ingredient']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'sms/' [name='send_sms']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'drink_list1/' [name='drink_list1']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'recipe_details/<int:pk>' [name='recipe_details']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) 'accounts/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\myvenv\\lib\\site-packages\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^media/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) 'accounts/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern '' [name='drink_list']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'search/' [name='search_results']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'no_name/' [name='drink_list']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'signup/' [name='signup']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'add_recipe/' [name='add_recipe']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'login_required/' [name='login_required']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'success/' [name='success_added_recipe']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'add_ingredient/' [name='add_ingredient']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'success1/' [name='success_added_ingredient']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'sms/' [name='send_sms']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'drink_list1/' [name='drink_list1']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) ''>, <URLPattern 'recipe_details/<int:pk>' [name='recipe_details']>], [<URLResolver <module 'drinks.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\drinks\\urls.py'> (None:None) 'accounts/'>], [<URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\myvenv\\lib\\site-packages\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>], [<URLPattern '^static/(?P<path>.*)$'>], [<URLPattern '^media/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'django.contrib.auth.urls' from 'C:\\Users\\Luiza\\drinkdrankdrunk\\myvenv\\lib\\site-packages\\django\\contrib\\auth\\urls.py'> (None:None) 'accounts/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4595
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 08:53:44.238707' AND "django_session"."session_key" = 'o2bifk1aj31ppzgmjqs11yik3ft6nr3y'); args=('2020-04-18 08:53:44.238707', 'o2bifk1aj31ppzgmjqs11yik3ft6nr3y')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /sms/ HTTP/1.1" 200 652
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 08:53:48.641686' AND "django_session"."session_key" = 'o2bifk1aj31ppzgmjqs11yik3ft6nr3y'); args=('2020-04-18 08:53:48.641686', 'o2bifk1aj31ppzgmjqs11yik3ft6nr3y')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'o2bifk1aj31ppzgmjqs11yik3ft6nr3y'; args=('o2bifk1aj31ppzgmjqs11yik3ft6nr3y',)
+(0.000) BEGIN; args=None
+(0.003) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('o2bifk1aj31ppzgmjqs11yik3ft6nr3y'); args=('o2bifk1aj31ppzgmjqs11yik3ft6nr3y',)
+"GET /accounts/logout/ HTTP/1.1" 302 0
+"GET / HTTP/1.1" 200 946
+"GET /sms/ HTTP/1.1" 200 88
+"GET /sms/ HTTP/1.1" 200 260
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET / HTTP/1.1" 200 946
+"GET /accounts/login/ HTTP/1.1" 200 564
+(0.001) SELECT "drinks_recipe"."id", "drinks_recipe"."recipe_name", "drinks_recipe"."preparation", "drinks_recipe"."recipe_image" FROM "drinks_recipe" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_recipe"."id" = "drinks_recipe_ingredients"."recipe_id") INNER JOIN "drinks_ingredient" ON ("drinks_recipe_ingredients"."ingredient_id" = "drinks_ingredient"."id") WHERE "drinks_ingredient"."ingredient_name" LIKE '%sok%' ESCAPE '\'; args=('%sok%',)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 8; args=(8,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 9; args=(9,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 12; args=(12,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 26; args=(26,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 32; args=(32,)
+"GET /accounts/search/?q=sok HTTP/1.1" 200 2506
+"GET /media/images/miejsce-parkingowe-parking-samochod-auto.jpg HTTP/1.1" 304 0
+"GET /accounts/login/ HTTP/1.1" 200 564
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'lui93'; args=('lui93',)
+(0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'jasue4obbcum7r2imhl4637rdzav4vy4'  LIMIT 1; args=('jasue4obbcum7r2imhl4637rdzav4vy4',)
+(0.000) BEGIN; args=None
+(0.003) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'jasue4obbcum7r2imhl4637rdzav4vy4', 'ODMzYTQ2N2QzZjg3MjNkN2M3YzQwY2Y3NWI3ZjI0NGE2NjU4NTI1OTp7fQ==', '2020-05-02 09:00:44.247946'; args=('jasue4obbcum7r2imhl4637rdzav4vy4', 'ODMzYTQ2N2QzZjg3MjNkN2M3YzQwY2Y3NWI3ZjI0NGE2NjU4NTI1OTp7fQ==', '2020-05-02 09:00:44.247946')
+(0.000) BEGIN; args=None
+(0.001) UPDATE "auth_user" SET "last_login" = '2020-04-18 09:00:44.253944' WHERE "auth_user"."id" = 1; args=('2020-04-18 09:00:44.253944', 1)
+(0.000) BEGIN; args=None
+(0.001) UPDATE "django_session" SET "session_data" = 'NmE4YzExODJlNjQ2ZGFlZTE5MjljZWVlOGVmYWEwMGMxYjg3ZDI3YTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5MjE5NTkzZDYzODQyYjg0NjUxOGM5NWYxMzA0NTc5OWY1M2NmNTJhIn0=', "expire_date" = '2020-05-02 09:00:44.260119' WHERE "django_session"."session_key" = 'jasue4obbcum7r2imhl4637rdzav4vy4'; args=('NmE4YzExODJlNjQ2ZGFlZTE5MjljZWVlOGVmYWEwMGMxYjg3ZDI3YTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5MjE5NTkzZDYzODQyYjg0NjUxOGM5NWYxMzA0NTc5OWY1M2NmNTJhIn0=', '2020-05-02 09:00:44.260119', 'jasue4obbcum7r2imhl4637rdzav4vy4')
+"POST /accounts/login/ HTTP/1.1" 302 0
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 09:00:44.271227' AND "django_session"."session_key" = 'jasue4obbcum7r2imhl4637rdzav4vy4'); args=('2020-04-18 09:00:44.271227', 'jasue4obbcum7r2imhl4637rdzav4vy4')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET / HTTP/1.1" 200 1091
+(0.000) SELECT "drinks_recipe"."id", "drinks_recipe"."recipe_name", "drinks_recipe"."preparation", "drinks_recipe"."recipe_image" FROM "drinks_recipe"; args=()
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 8; args=(8,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 9; args=(9,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 10; args=(10,)
+(0.001) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 12; args=(12,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 26; args=(26,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 32; args=(32,)
+"GET /drink_list1/ HTTP/1.1" 200 2449
+(0.003) SELECT "drinks_recipe"."id", "drinks_recipe"."recipe_name", "drinks_recipe"."preparation", "drinks_recipe"."recipe_image" FROM "drinks_recipe" WHERE "drinks_recipe"."id" = 8; args=(8,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 8; args=(8,)
+"GET /accounts/recipe_details/8 HTTP/1.1" 200 669
+(0.000) SELECT "drinks_recipe"."id", "drinks_recipe"."recipe_name", "drinks_recipe"."preparation", "drinks_recipe"."recipe_image" FROM "drinks_recipe" WHERE "drinks_recipe"."id" = 9; args=(9,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 9; args=(9,)
+"GET /accounts/recipe_details/9 HTTP/1.1" 200 873
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 09:00:52.079271' AND "django_session"."session_key" = 'jasue4obbcum7r2imhl4637rdzav4vy4'); args=('2020-04-18 09:00:52.079271', 'jasue4obbcum7r2imhl4637rdzav4vy4')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /sms/ HTTP/1.1" 200 652
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 09:00:55.467233' AND "django_session"."session_key" = 'jasue4obbcum7r2imhl4637rdzav4vy4'); args=('2020-04-18 09:00:55.467233', 'jasue4obbcum7r2imhl4637rdzav4vy4')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient"; args=()
+"GET /add_recipe/ HTTP/1.1" 200 2609

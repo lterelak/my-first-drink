@@ -3,6 +3,7 @@
         send sms
     </title>
     <body>
+        {% if user.is_authenticated %}
         <form method="post">
         {% csrf_token %}
             <input type="text" name="username" placeholder="username" size="30">
@@ -13,5 +14,11 @@
             <br><br>
             <input type="submit" value="send">
         </form>
+        {% else %}
+            <p>You are not logged in</p>
+            <a href="{% url 'login' %}">login</a>
+            <br>
+            <a href="/accounts/signup">Registration</a>
+        {% endif %}
     </body>
 </html>
