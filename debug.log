@@ -30069,3 +30069,101 @@ Not Found: /favicon.ico
 (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 09:13:01.008907' AND "django_session"."session_key" = 'jasue4obbcum7r2imhl4637rdzav4vy4'); args=('2020-04-18 09:13:01.008907', 'jasue4obbcum7r2imhl4637rdzav4vy4')
 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
 "GET /sms/ HTTP/1.1" 200 652
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 16:50:35.641517' AND "django_session"."session_key" = 'jasue4obbcum7r2imhl4637rdzav4vy4'); args=('2020-04-18 16:50:35.641517', 'jasue4obbcum7r2imhl4637rdzav4vy4')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET / HTTP/1.1" 200 1091
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 16:50:38.141340' AND "django_session"."session_key" = 'jasue4obbcum7r2imhl4637rdzav4vy4'); args=('2020-04-18 16:50:38.141340', 'jasue4obbcum7r2imhl4637rdzav4vy4')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /sms/ HTTP/1.1" 200 680
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 16:51:30.170630' AND "django_session"."session_key" = 'jasue4obbcum7r2imhl4637rdzav4vy4'); args=('2020-04-18 16:51:30.170630', 'jasue4obbcum7r2imhl4637rdzav4vy4')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /sms/ HTTP/1.1" 200 674
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 16:51:44.791193' AND "django_session"."session_key" = 'jasue4obbcum7r2imhl4637rdzav4vy4'); args=('2020-04-18 16:51:44.791193', 'jasue4obbcum7r2imhl4637rdzav4vy4')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /sms/ HTTP/1.1" 200 672
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-18 16:52:58.374872' AND "django_session"."session_key" = 'jasue4obbcum7r2imhl4637rdzav4vy4'); args=('2020-04-18 16:52:58.374872', 'jasue4obbcum7r2imhl4637rdzav4vy4')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /sms/ HTTP/1.1" 200 672
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-26 17:36:23.488449' AND "django_session"."session_key" = 'lhss40r082sdx2kos2f4bponh9j13vew'); args=('2020-04-26 17:36:23.488449', 'lhss40r082sdx2kos2f4bponh9j13vew')
+"GET / HTTP/1.1" 200 946
+"GET /static/css/drinks.css HTTP/1.1" 200 714
+"GET /accounts/login/ HTTP/1.1" 200 564
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'lui93'; args=('lui93',)
+"POST /accounts/login/ HTTP/1.1" 200 714
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'Lui93'; args=('Lui93',)
+"POST /accounts/login/ HTTP/1.1" 200 714
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'lui93'; args=('lui93',)
+(0.000) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = '2hxkwcruydqu9kebgmcdtbtgq0nd5r5l'  LIMIT 1; args=('2hxkwcruydqu9kebgmcdtbtgq0nd5r5l',)
+(0.000) BEGIN; args=None
+(0.003) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT '2hxkwcruydqu9kebgmcdtbtgq0nd5r5l', 'ODMzYTQ2N2QzZjg3MjNkN2M3YzQwY2Y3NWI3ZjI0NGE2NjU4NTI1OTp7fQ==', '2020-05-10 17:36:58.339838'; args=('2hxkwcruydqu9kebgmcdtbtgq0nd5r5l', 'ODMzYTQ2N2QzZjg3MjNkN2M3YzQwY2Y3NWI3ZjI0NGE2NjU4NTI1OTp7fQ==', '2020-05-10 17:36:58.339838')
+(0.000) BEGIN; args=None
+(0.001) UPDATE "auth_user" SET "last_login" = '2020-04-26 17:36:58.347578' WHERE "auth_user"."id" = 1; args=('2020-04-26 17:36:58.347578', 1)
+(0.000) BEGIN; args=None
+(0.001) UPDATE "django_session" SET "session_data" = 'NmE4YzExODJlNjQ2ZGFlZTE5MjljZWVlOGVmYWEwMGMxYjg3ZDI3YTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5MjE5NTkzZDYzODQyYjg0NjUxOGM5NWYxMzA0NTc5OWY1M2NmNTJhIn0=', "expire_date" = '2020-05-10 17:36:58.351575' WHERE "django_session"."session_key" = '2hxkwcruydqu9kebgmcdtbtgq0nd5r5l'; args=('NmE4YzExODJlNjQ2ZGFlZTE5MjljZWVlOGVmYWEwMGMxYjg3ZDI3YTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5MjE5NTkzZDYzODQyYjg0NjUxOGM5NWYxMzA0NTc5OWY1M2NmNTJhIn0=', '2020-05-10 17:36:58.351575', '2hxkwcruydqu9kebgmcdtbtgq0nd5r5l')
+"POST /accounts/login/ HTTP/1.1" 302 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-26 17:36:58.361589' AND "django_session"."session_key" = '2hxkwcruydqu9kebgmcdtbtgq0nd5r5l'); args=('2020-04-26 17:36:58.361589', '2hxkwcruydqu9kebgmcdtbtgq0nd5r5l')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET / HTTP/1.1" 200 1091
+"GET /drink_list1 HTTP/1.1" 301 0
+(0.000) SELECT "drinks_recipe"."id", "drinks_recipe"."recipe_name", "drinks_recipe"."preparation", "drinks_recipe"."recipe_image" FROM "drinks_recipe"; args=()
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 8; args=(8,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 9; args=(9,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 10; args=(10,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 12; args=(12,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 26; args=(26,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 32; args=(32,)
+"GET /drink_list1/ HTTP/1.1" 200 2449
+"GET /media/images/tequila-sunrise.jpg HTTP/1.1" 200 42363
+"GET /media/images/blac_magic_drink.jpg HTTP/1.1" 200 196767
+"GET /media/images/malib_cola.jpg HTTP/1.1" 200 134509
+"GET /media/images/Mexicola_bKM8O6x.jpg HTTP/1.1" 200 75718
+"GET /media/images/drink.jpg HTTP/1.1" 200 16872
+"GET /media/images/miejsce-parkingowe-parking-samochod-auto.jpg HTTP/1.1" 200 541107
+(0.003) SELECT "drinks_recipe"."id", "drinks_recipe"."recipe_name", "drinks_recipe"."preparation", "drinks_recipe"."recipe_image" FROM "drinks_recipe" WHERE "drinks_recipe"."id" = 9; args=(9,)
+(0.000) SELECT "drinks_ingredient"."id", "drinks_ingredient"."ingredient_name" FROM "drinks_ingredient" INNER JOIN "drinks_recipe_ingredients" ON ("drinks_ingredient"."id" = "drinks_recipe_ingredients"."ingredient_id") WHERE "drinks_recipe_ingredients"."recipe_id" = 9; args=(9,)
+"GET /accounts/recipe_details/9 HTTP/1.1" 200 873
+"GET /sms HTTP/1.1" 301 0
+(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-26 17:37:03.665599' AND "django_session"."session_key" = '2hxkwcruydqu9kebgmcdtbtgq0nd5r5l'); args=('2020-04-26 17:37:03.665599', '2hxkwcruydqu9kebgmcdtbtgq0nd5r5l')
+(0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+Internal Server Error: /sms/
+Traceback (most recent call last):
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Luiza\drinkdrankdrunk\myvenv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Luiza\drinkdrankdrunk\drinks\views.py", line 93, in send_sms
+    proxy_client = TwilioHttpClient(proxy={'http': os.environ['http_proxy'], 'https': os.environ['https_proxy']})
+  File "C:\Users\Luiza\AppData\Local\Programs\Python\Python37\lib\os.py", line 678, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'http_proxy'
+"GET /sms/ HTTP/1.1" 500 82317
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2020-04-26 17:37:50.284710' AND "django_session"."session_key" = '2hxkwcruydqu9kebgmcdtbtgq0nd5r5l'); args=('2020-04-26 17:37:50.284710', '2hxkwcruydqu9kebgmcdtbtgq0nd5r5l')
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+"GET /sms/ HTTP/1.1" 200 672

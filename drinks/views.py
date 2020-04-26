@@ -19,13 +19,13 @@ from twilio.rest import Client
 from django.shortcuts import get_list_or_404, get_object_or_404
 
 def drink_list(request):
-    return render(request, "drinks/drink_list.html")
+    return render(request, 'drinks/drink_list.html')
 
 def search_results(request):
     query = request.GET.get('q')
 
     if not query or query.strip() == '':
-        messages.error(request, "Search field can not be empty")
+        messages.error(request, 'Search field can not be empty')
         return redirect('drink_list')
     #early return (else:)
     q = Q()
@@ -33,22 +33,22 @@ def search_results(request):
     #with point .split(',') it is not going to look for many ingredients, but "sok z cytryny" is then counted as one ingredient, how to search for many ingredients and make django know that "sok z cytryny" is only one ingredient in the same time.
         q |= (Q(ingredients__ingredient_name__contains=ingredient_name))
     results = Recipe.objects.filter(q)
-    return render(request, "drinks/search_results.html", {"results":results})
+    return render(request, 'drinks/search_results.html', {'results':results})
 
 def signup(request):
     form = UserCreationForm()
-    if request.method == "POST":
+    if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect("/")
-    return render(request, "drinks/signup.html", {"form":form})
+        return redirect('/')
+    return render(request, 'drinks/signup.html', {'form':form})
 
 def login_required(request):
-    return render(request, "drinks/login_required.html")
+    return render(request, 'drinks/login_required.html')
 
 def success_added_recipe(request):
-    return render(request, "drinks/success_added_recipe.html")
+    return render(request, 'drinks/success_added_recipe.html')
 
 def add_recipe(request):
      if not request.user.is_authenticated:
@@ -87,16 +87,17 @@ def recipe_details(request, pk):
     return render(request, 'drinks/recipe_details.html', {'recipe_details': recipe_details})
 
 def send_sms(request):
+
     client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
 
-    if "username" in request.POST and "sendto" in request.POST and "message" in request.POST:
-        username = request.POST["username"]
-        sendto = request.POST["sendto"]
-        message=request.POST["message"]
+    if 'username' in request.POST and 'sendto' in request.POST and 'message' in request.POST:
+        username = request.POST['username']
+        sendto = request.POST['sendto']
+        message=request.POST['message']
         client.messages.create(to=sendto,
                                from_=settings.TWILIO_NUMBER,
                                body=message)
-        return HttpResponse("Send")
+        return HttpResponse('Send')
     return render(request, 'drinks/send_sms.html', {'send_sms': send_sms})
 
 
