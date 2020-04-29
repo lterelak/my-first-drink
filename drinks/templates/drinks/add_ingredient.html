@@ -9,7 +9,7 @@
 <h1>Add ingredient</h1>
 </br>
 </br>
-<form method="post" action="{% url 'add_ingredient' %}">
+<form method="post" action="{% url "add_ingredient" %}">
 {% csrf_token %}
 <table>
 {{IngredientForm}}

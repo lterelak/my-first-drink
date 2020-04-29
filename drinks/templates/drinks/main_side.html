@@ -1,0 +1,50 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/drinks.css' %}">
+  </head>
+  <body>
+    <div id="logo">
+        Drink drank drunk
+    </div>
+    <div id="headliner">
+        <div id="login">
+            {% if user.is_authenticated %}
+                Hi {{ user.username }}!
+            <p><a href="{% url 'logout' %}">logout</a></p>
+            {% else %}
+                <p>You are not logged in</p>
+                <a href="{% url 'login' %}">login</a>
+                <br>
+                <a href="/accounts/signup">Registration</a>
+            {% endif %}
+
+        </div>
+        <div id="menu">
+            {% if user.is_authenticated %}
+            <ul>
+                <li><a href="add-recipe">Add recipe</a></li>
+                <li><a href="add-ingredient">Add ingredient</a></li>
+                <li><a href="drink-list">Drink list</a></li>
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+    <div id="searchfield">
+      <h1>What ingredients do you have?</h1>
+      <form action="{% url 'search_results' %}" method="get" autocomplete="off">
+        <input name="q" type="text" placeholder="Search...">
+      </form>
+      {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+     </div>
+
+  </body>
+</html>

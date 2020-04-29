@@ -23,7 +23,7 @@ from django.views.generic.base import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('drinks.urls')),
-    path('accounts/', include('drinks.urls')),#newsingup
+    path('accounts/', include('drinks.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
 urlpatterns += staticfiles_urlpatterns()

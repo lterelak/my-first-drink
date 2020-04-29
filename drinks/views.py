@@ -18,15 +18,15 @@ from twilio.rest import Client
 
 from django.shortcuts import get_list_or_404, get_object_or_404
 
-def drink_list(request):
-    return render(request, 'drinks/drink_list.html')
+def main_side(request):
+    return render(request, 'drinks/main_side.html')
 
 def search_results(request):
     query = request.GET.get('q')
 
     if not query or query.strip() == '':
         messages.error(request, 'Search field can not be empty')
-        return redirect('drink_list')
+        return redirect('main_side')
     #early return (else:)
     q = Q()
     for ingredient_name in query.split(','):
@@ -78,9 +78,9 @@ def add_ingredient(request):
 def success_added_ingredient(request):
     return render(request, 'drinks/success_added_ingredient.html')
 
-def drink_list1(request):
+def drink_list(request):
     drinks = Recipe.objects.all()
-    return render(request, 'drinks/drink_list1.html', {'drinks': drinks})
+    return render(request, 'drinks/drink_list.html', {'drinks': drinks})
 
 def recipe_details(request, pk):
     recipe_details = get_object_or_404(Recipe, pk=pk)
